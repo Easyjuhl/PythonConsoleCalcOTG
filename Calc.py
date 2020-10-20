@@ -16,9 +16,14 @@ while True:
         in2 = input("Write another number: ").lower()
         try:
             a = float(in1)
+        except ValueError:
+            print("Error: a was an invalid number")
+            sleep(5)
+            break
+        try:
             b = float(in2) 
         except ValueError:
-            print("Error: a or b was an invalid number")
+            print("Error: b was an invalid number")
             sleep(5)
             break
         c = a+b
@@ -29,9 +34,14 @@ while True:
         in2 = input("Write another number: ").lower()
         try:
             a = float(in1)
+        except ValueError:
+            print("Error: a was an invalid number")
+            sleep(5)
+            break
+        try:
             b = float(in2) 
         except ValueError:
-            print("Error: a or b was an invalid number")
+            print("Error: b was an invalid number")
             sleep(5)
             break
         c = a-b
@@ -42,9 +52,14 @@ while True:
         in2 = input("Write another number: ").lower()
         try:
             a = float(in1)
+        except ValueError:
+            print("Error: a was an invalid number")
+            sleep(5)
+            break
+        try:
             b = float(in2) 
         except ValueError:
-            print("Error: a or b was an invalid number")
+            print("Error: b was an invalid number")
             sleep(5)
             break
         c = a*b
@@ -55,9 +70,14 @@ while True:
         in2 = input("Write another number: ").lower()
         try:
             a = float(in1)
+        except ValueError:
+            print("Error: a was an invalid number")
+            sleep(5)
+            break
+        try:
             b = float(in2) 
         except ValueError:
-            print("Error: a or b was an invalid number")
+            print("Error: b was an invalid number")
             sleep(5)
             break
         c = a/b
