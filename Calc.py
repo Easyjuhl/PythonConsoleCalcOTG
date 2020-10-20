@@ -1,4 +1,5 @@
 #A simple calculator
+from time import sleep
 while True:
     print(""" 
     Add: Addition
@@ -18,6 +19,8 @@ while True:
             b = float(in2) 
         except ValueError:
             print("Error: a or b was an invalid number")
+            sleep(5)
+            break
         c = a+b
         output = "{} + {} = {}".format(a, b, c)
         print(output)
@@ -29,6 +32,8 @@ while True:
             b = float(in2) 
         except ValueError:
             print("Error: a or b was an invalid number")
+            sleep(5)
+            break
         c = a-b
         output = "{} - {} = {}".format(a, b, c)
         print(output)
@@ -40,6 +45,8 @@ while True:
             b = float(in2) 
         except ValueError:
             print("Error: a or b was an invalid number")
+            sleep(5)
+            break
         c = a*b
         output = "{} * {} = {}".format(a, b, c)
         print(output)
@@ -51,6 +58,8 @@ while True:
             b = float(in2) 
         except ValueError:
             print("Error: a or b was an invalid number")
+            sleep(5)
+            break
         c = a/b
         output = "{} / {} = {}".format(a, b, c)
         print(output)
