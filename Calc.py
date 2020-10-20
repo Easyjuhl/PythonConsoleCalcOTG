@@ -13,32 +13,44 @@ while True:
     if slct == "add":
         in1 = input("Write a number: ").lower()
         in2 = input("Write another number: ").lower()
-        a = float(in1)
-        b = float(in2) 
+        try:
+            a = float(in1)
+            b = float(in2) 
+        except ValueError:
+            print("Error: a or b was an invalid number")
         c = a+b
         output = "{} + {} = {}".format(a, b, c)
         print(output)
     elif slct == "sub":
         in1 = input("Write a number: ").lower()
         in2 = input("Write another number: ").lower()
-        a = float(in1)
-        b = float(in2) 
+        try:
+            a = float(in1)
+            b = float(in2) 
+        except ValueError:
+            print("Error: a or b was an invalid number")
         c = a-b
         output = "{} - {} = {}".format(a, b, c)
         print(output)
     elif slct == "mul":
         in1 = input("Write a number: ").lower()
         in2 = input("Write another number: ").lower()
-        a = float(in1)
-        b = float(in2) 
+        try:
+            a = float(in1)
+            b = float(in2) 
+        except ValueError:
+            print("Error: a or b was an invalid number")
         c = a*b
         output = "{} * {} = {}".format(a, b, c)
         print(output)
     elif slct == "div":
         in1 = input("Write a number: ").lower()
         in2 = input("Write another number: ").lower()
-        a = float(in1)
-        b = float(in2) 
+        try:
+            a = float(in1)
+            b = float(in2) 
+        except ValueError:
+            print("Error: a or b was an invalid number")
         c = a/b
         output = "{} / {} = {}".format(a, b, c)
         print(output)
