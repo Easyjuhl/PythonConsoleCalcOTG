@@ -1,6 +1,7 @@
 #A simple calculator
 from time import sleep
 from sympy import symbols, Eq, solve, diff
+from utils import Errorhandling
 x, y, a, b, c, d = symbols('x y a b c d')
 while True:
     print(""" 
@@ -21,6 +22,7 @@ while True:
     Write quit to quit
 
     """)
+
     slct = input("Select: ").lower()
     if slct == "add":
         in1 = input("Write a number: ").lower()
@@ -28,14 +30,12 @@ while True:
         try:
             a = float(in1)
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in1))
-            sleep(3)
+            Errorhandling.valerror(in1)
             break
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in2))
-            sleep(3)
+            Errorhandling.valerror(in2)
             break
         c = a+b
         output = "{} + {} = {}".format(a, b, c)
@@ -46,14 +46,12 @@ while True:
         try:
             a = float(in1)
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in1))
-            sleep(3)
+            Errorhandling.valerror(in1)
             break
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in2))
-            sleep(3)
+            Errorhandling.valerror(in2)
             break
         c = a-b
         output = "{} - {} = {}".format(a, b, c)
@@ -64,8 +62,7 @@ while True:
         try:
             amountint = int(amountstr) 
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(amountstr))
-            sleep(3)
+            Errorhandling.valerror(amountstr)
             break
         for inn in range(amountint):
             ite = inn + 1
@@ -73,8 +70,7 @@ while True:
             try:
                 a = float(in1) 
             except ValueError:
-                print("Error: Your input {} is not a valid input".format(in1))
-                sleep(3)
+                Errorhandling.valerror(in1)
                 break
             lst.append(a)
         b = sum(lst)
@@ -87,14 +83,12 @@ while True:
         try:
             a = float(in1)
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in1))
-            sleep(3)
+            Errorhandling.valerror(in1)
             break
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in2))
-            sleep(3)
+            Errorhandling.valerror(in2)
             break
         c = a*b
         output = "{} * {} = {}".format(a, b, c)
@@ -109,14 +103,12 @@ while True:
         try:
             inn1 = float(in1)
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in1))
-            sleep(3)
+            Errorhandling.valerror(in1)
             break
         try:
             inn2 = float(in2)
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in1))
-            sleep(3)
+            Errorhandling.valerror(in2)
             break
         eq1 = Eq(a*inn1**3 + b*inn1**2 + c*inn1 + d, f1.subs(x, inn1))
         eq2 = Eq(a*inn2**3 + b*inn2**2 + c*inn2 + d, f2.subs(x, inn2))
@@ -130,14 +122,12 @@ while True:
         try:
             a = float(in1)
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in1))
-            sleep(3)
+            Errorhandling.valerror(in1)
             break
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in2))
-            sleep(3)
+            Errorhandling.valerror(in2)
             break
         c = a/b
         output = "{} / {} = {}".format(a, b, c)
@@ -145,6 +135,5 @@ while True:
     elif slct == "quit":
         break
     else:
-        print("Error: Your input {} is not a valid input".format(slct))
-        sleep(3)
+        Errorhandling.valerror(slct)
         break
