@@ -1,5 +1,7 @@
 #A simple calculator
 from time import sleep
+from sympy import symbols, Eq, solve, diff
+x, y, a, b, c, d = symbols('x y a b c d')
 while True:
     print(""" 
      _____       _            _       _             
@@ -14,6 +16,7 @@ while True:
     Mul: Multiplication
     Div: Division
     Ave: Average
+    Smt: Smoother
 
     Write quit to quit
 
@@ -96,6 +99,31 @@ while True:
         c = a*b
         output = "{} * {} = {}".format(a, b, c)
         print(output)
+    elif slct == "smt":
+        print("Write functions:")
+        f1 = eval(input("f1: ").replace("^", "**"))
+        f2 = eval(input("f2: ").replace("^", "**"))
+        print("Vælg interval")
+        in1 = input("Write a number: ")
+        in2 = input("Write another number: ")
+        try:
+            inn1 = float(in1)
+        except ValueError:
+            print("Error: Your input {} is not a valid input".format(in1))
+            sleep(3)
+            break
+        try:
+            inn2 = float(in2)
+        except ValueError:
+            print("Error: Your input {} is not a valid input".format(in1))
+            sleep(3)
+            break
+        eq1 = Eq(a*inn1**3 + b*inn1**2 + c*inn1 + d, f1.subs(x, inn1))
+        eq2 = Eq(a*inn2**3 + b*inn2**2 + c*inn2 + d, f2.subs(x, inn2))
+        eq3 = Eq(3*a*inn1**2 + 2*b*inn1 + c, diff(f1, x).subs(x, inn1))
+        eq4 = Eq(3*a*inn2**2 + 2*b*inn2 + c, diff(f2, x).subs(x, inn2))
+        sol = solve((eq1, eq2, eq3, eq4), (a, b, c, d))
+        print("{}*x^3 + {}*x^2 + {}*x + {}".format(sol[a], sol[b], sol[c], sol[d]))
     elif slct == "div":
         in1 = input("Write a number: ").lower()
         in2 = input("Write another number: ").lower()
