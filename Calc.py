@@ -25,13 +25,13 @@ while True:
             a = float(in1)
         except ValueError:
             print("Error: Your input {} is not a valid input".format(in1))
-            sleep(5)
+            sleep(3)
             break
         try:
             b = float(in2) 
         except ValueError:
             print("Error: Your input {} is not a valid input".format(in2))
-            sleep(5)
+            sleep(3)
             break
         c = a+b
         output = "{} + {} = {}".format(a, b, c)
@@ -43,13 +43,13 @@ while True:
             a = float(in1)
         except ValueError:
             print("Error: Your input {} is not a valid input".format(in1))
-            sleep(5)
+            sleep(3)
             break
         try:
             b = float(in2) 
         except ValueError:
             print("Error: Your input {} is not a valid input".format(in2))
-            sleep(5)
+            sleep(3)
             break
         c = a-b
         output = "{} - {} = {}".format(a, b, c)
@@ -61,13 +61,13 @@ while True:
             a = float(in1)
         except ValueError:
             print("Error: Your input {} is not a valid input".format(in1))
-            sleep(5)
+            sleep(3)
             break
         try:
             b = float(in2) 
         except ValueError:
             print("Error: Your input {} is not a valid input".format(in2))
-            sleep(5)
+            sleep(3)
             break
         c = a*b
         output = "{} * {} = {}".format(a, b, c)
@@ -79,18 +79,20 @@ while True:
             a = float(in1)
         except ValueError:
             print("Error: Your input {} is not a valid input".format(in1))
-            sleep(5)
+            sleep(3)
             break
         try:
             b = float(in2) 
         except ValueError:
             print("Error: Your input {} is not a valid input".format(in2))
-            sleep(5)
+            sleep(3)
             break
         c = a/b
         output = "{} / {} = {}".format(a, b, c)
         print(output)
+    elif slct == "quit":
+        break
     else:
         print("Error: Your input {} is not a valid input".format(slct))
-        sleep(5)
+        sleep(3)
         break
