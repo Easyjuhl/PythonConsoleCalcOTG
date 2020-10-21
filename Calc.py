@@ -2,6 +2,13 @@
 from time import sleep
 while True:
     print(""" 
+     _____       _            _       _             
+    /  __ \     | |          | |     | |            
+    | /  \/ __ _| | ___ _   _| | __ _| |_ ___  _ __ 
+    | |    / _` | |/ __| | | | |/ _` | __/ _ \| '__|
+    | \__/\ (_| | | (__| |_| | | (_| | || (_) | |   
+     \____/\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|   
+                                                
     Add: Addition
     Sub: Substraction
     Mul: Multiplication
@@ -17,13 +24,13 @@ while True:
         try:
             a = float(in1)
         except ValueError:
-            print("Error: a was an invalid number")
+            print("Error: Your input {} is not a valid input".format(in1))
             sleep(5)
             break
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: b was an invalid number")
+            print("Error: Your input {} is not a valid input".format(in1))
             sleep(5)
             break
         c = a+b
@@ -35,13 +42,13 @@ while True:
         try:
             a = float(in1)
         except ValueError:
-            print("Error: a was an invalid number")
+            print("Error: Your input {} is not a valid input".format(in1))
             sleep(5)
             break
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: b was an invalid number")
+            print("Error: Your input {} is not a valid input".format(in1))
             sleep(5)
             break
         c = a-b
@@ -53,13 +60,13 @@ while True:
         try:
             a = float(in1)
         except ValueError:
-            print("Error: a was an invalid number")
+            print("Error: Your input {} is not a valid input".format(in1))
             sleep(5)
             break
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: b was an invalid number")
+            print("Error: Your input {} is not a valid input".format(in1))
             sleep(5)
             break
         c = a*b
@@ -71,13 +78,13 @@ while True:
         try:
             a = float(in1)
         except ValueError:
-            print("Error: a was an invalid number")
+            print("Error: Your input {} is not a valid input".format(in1))
             sleep(5)
             break
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: b was an invalid number")
+            print("Error: Your input {} is not a valid input".format(in1))
             sleep(5)
             break
         c = a/b
