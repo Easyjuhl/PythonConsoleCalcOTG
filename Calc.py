@@ -13,6 +13,7 @@ while True:
     Sub: Substraction
     Mul: Multiplication
     Div: Division
+    Ave: Average
 
     Write quit to quit
 
@@ -54,6 +55,29 @@ while True:
         c = a-b
         output = "{} - {} = {}".format(a, b, c)
         print(output)
+    elif slct == "avg":
+        lst = []
+        amountstr = input("Amount of operands: ")
+        try:
+            amountint = int(amountstr) 
+        except ValueError:
+            print("Error: Your input {} is not a valid input".format(amountstr))
+            sleep(3)
+            break
+        for inn in range(amountint):
+            ite = inn + 1
+            in1 = input("Number " + str(ite) + ": ")
+            try:
+                a = float(in1) 
+            except ValueError:
+                print("Error: Your input {} is not a valid input".format(in1))
+                sleep(3)
+                break
+            lst.append(a)
+        b = sum(lst)
+        c = b/amountint
+        output = "{} / {} = {}".format(b, amountint, c)
+        print(output)            
     elif slct == "mul":
         in1 = input("Write a number: ").lower()
         in2 = input("Write another number: ").lower()
