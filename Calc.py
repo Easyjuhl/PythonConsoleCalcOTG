@@ -30,7 +30,7 @@ while True:
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in1))
+            print("Error: Your input {} is not a valid input".format(in2))
             sleep(5)
             break
         c = a+b
@@ -48,7 +48,7 @@ while True:
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in1))
+            print("Error: Your input {} is not a valid input".format(in2))
             sleep(5)
             break
         c = a-b
@@ -66,7 +66,7 @@ while True:
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in1))
+            print("Error: Your input {} is not a valid input".format(in2))
             sleep(5)
             break
         c = a*b
@@ -84,11 +84,13 @@ while True:
         try:
             b = float(in2) 
         except ValueError:
-            print("Error: Your input {} is not a valid input".format(in1))
+            print("Error: Your input {} is not a valid input".format(in2))
             sleep(5)
             break
         c = a/b
         output = "{} / {} = {}".format(a, b, c)
         print(output)
     else:
+        print("Error: Your input {} is not a valid input".format(slct))
+        sleep(5)
         break
