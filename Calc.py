@@ -25,21 +25,25 @@ while True:
 
     slct = input("Select: ").lower()
     if slct == "add":
-        in1 = input("Write a number: ").lower()
-        in2 = input("Write another number: ").lower()
+        lst = []
+        amountstr = input("Amount of operands: ")
         try:
-            a = float(in1)
+            amountint = int(amountstr) 
         except ValueError:
-            Errorhandling.valerror(in1)
+            Errorhandling.valerror(amountstr)
             break
-        try:
-            b = float(in2) 
-        except ValueError:
-            Errorhandling.valerror(in2)
-            break
-        c = a+b
-        output = "{} + {} = {}".format(a, b, c)
-        print(output)
+        for inn in range(amountint):
+            ite = inn + 1
+            in1 = input("Number " + str(ite) + ": ")
+            try:
+                a = float(in1) 
+            except ValueError:
+                print("Error: Your input {} is not a valid input".format(in1))
+                sleep(3)
+                break
+            lst.append(a)
+        c = sum(lst)
+        print("The sum is {}".format(c))
     elif slct == "sub":
         in1 = input("Write a number: ").lower()
         in2 = input("Write another number: ").lower()
