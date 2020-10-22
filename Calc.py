@@ -38,8 +38,7 @@ while True:
             try:
                 a = float(in1) 
             except ValueError:
-                print("Error: Your input {} is not a valid input".format(in1))
-                sleep(3)
+                Errorhandling(in1)
                 break
             lst.append(a)
         c = sum(lst)
