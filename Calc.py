@@ -1,4 +1,4 @@
-#A simple calculator
+#A less simple calculator
 from time import sleep
 from sympy import symbols, Eq, solve, diff
 from utils import Errorhandling
